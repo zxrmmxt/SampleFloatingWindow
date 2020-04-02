@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#994D4D4D"
+        android:padding="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewCar"
+            android:layout_width="82dp"
+            android:layout_height="132dp"
+            android:background="@mipmap/img_car_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.xt.common.widget.NoPaddingTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bar"
+            android:textColor="#B4B4B5"
+            app:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@id/imageViewCar"
+            app:layout_constraintEnd_toEndOf="@id/imageViewCar"
+            app:layout_constraintStart_toStartOf="@id/imageViewCar" />
+
+        <com.xt.common.widget.NoPaddingTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="℃"
+            android:textColor="#B4B4B5"
+            app:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="@id/imageViewCar"
+            app:layout_constraintStart_toStartOf="@id/imageViewCar"
+            app:layout_constraintTop_toBottomOf="@id/imageViewCar" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <ImageView
+            android:id="@+id/imageViewTireLeftTop"
+            android:layout_width="22dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="16dp"
+            android:background="@mipmap/icon_wheel_gray"
+            app:layout_constraintStart_toStartOf="@id/imageViewCar"
+            app:layout_constraintTop_toTopOf="@id/imageViewCar" />
+
+        <ImageView
+            android:id="@+id/imageViewTireRightTop"
+            android:layout_width="22dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="7dp"
+            android:background="@mipmap/icon_wheel_gray"
+            app:layout_constraintEnd_toEndOf="@id/imageViewCar"
+            app:layout_constraintTop_toTopOf="@id/imageViewCar" />
+
+        <ImageView
+            android:id="@+id/imageViewTireLeftBottom"
+            android:layout_width="22dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginBottom="16dp"
+            android:background="@mipmap/icon_wheel_gray"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewCar"
+            app:layout_constraintStart_toStartOf="@id/imageViewCar" />
+
+        <ImageView
+            android:id="@+id/imageViewTireRightBottom"
+            android:layout_width="22dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="16dp"
+            android:background="@mipmap/icon_wheel_gray"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewCar"
+            app:layout_constraintEnd_toEndOf="@id/imageViewCar" />
+
+        <include
+            android:id="@+id/layoutTpmsValueLeftTop"
+            layout="@layout/layout_tpms_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintEnd_toStartOf="@id/imageViewCar"
+            app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal"/>
+        <include
+            android:id="@+id/layoutTpmsValueRightTop"
+            layout="@layout/layout_tpms_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintStart_toEndOf="@id/imageViewCar"
+            app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal"/>
+        <include
+            android:id="@+id/layoutTpmsValueLeftBottom"
+            layout="@layout/layout_tpms_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toStartOf="@id/imageViewCar"
+            app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal"/>
+        <include
+            android:id="@+id/layoutTpmsValueRightBottom"
+            layout="@layout/layout_tpms_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toEndOf="@id/imageViewCar"
+            app:layout_constraintTop_toBottomOf="@id/guidelineHorizontal"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
